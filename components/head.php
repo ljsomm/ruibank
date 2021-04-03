@@ -13,6 +13,8 @@
   <!-- Styles -->
   <link rel="stylesheet" href="./src/css/reset.css" rel="preload" />
   <link rel="stylesheet" href="./src/css/style.css" rel="preload" />
+  <!-- JS references -->
+  <script src="./src/js/jquery-3.6.0.min.js"></script>
   <!-- Page -->
   <title>RuiBank</title>
 </head>

@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  if(isset($_SESSION["cpf"]) && isset($_SESSION["senha"])){
+    header("Location: logs.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -11,17 +18,19 @@
       <h2>Login</h2>
       <p>Entre com seu login e senha</p>
 
-      <form action="">
+      <form method="POST" name="login" id="login">
         <label for="cpf-input">CPF</label>
-        <input id="cpf-input" name="cpf-input" type="text" placeholder="Digite seu CPF" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="11">
+        <input id="cpf-input" name="cpf" type="text" placeholder="Digite seu CPF" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="11">
 
         <label for="password-input">Senha</label>
-        <input id="password-input" name="password-input" type="password" placeholder="Digite sua senha">
-
+        <input id="password-input" name="senha" type="password" placeholder="Digite sua senha">
         <button id="btn-login" type="submit">Entrar</button>
       </form>
     </div>
+    <p class="msg-erro">TESTE ERO</p>
   </main>
+  <script src="src/js/main.js"></script>
+  <script src="src/js/events.js"></script>
 </body>
 
 </html>
