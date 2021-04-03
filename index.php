@@ -10,7 +10,7 @@
 
   <script>
     (function () {
-      window.location.href = "/login.php";
+      window.location.href = "./login.php";
     })()
   </script>
 

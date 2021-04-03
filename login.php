@@ -18,7 +18,7 @@
         <label for="password-input">Senha</label>
         <input id="password-input" name="password-input" type="password" placeholder="Digite sua senha">
 
-        <button type="submit">Entrar</button>
+        <button id="btn-login" type="submit">Entrar</button>
       </form>
     </div>
   </main>
