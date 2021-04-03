@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  if(!(isset($_SESSION["cpf"]) && isset($_SESSION["senha"]))){
+    header("Location: index.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,7 +12,10 @@
 
 <body id="page-logs">
   <?php require "./components/header.php" ?>
-
+  <div id='logout'>Sair</div>
+  <div class="fixed-button">
+    <button id="btn-transferencia">+</button>
+  </div>
   <main>
     <section>
       <h2>Dashboard</h2>
@@ -91,5 +101,8 @@
       </table>
     </section>
   </main>
+
+  <script src="src/js/main.js"></script>
+  <script src="src/js/events.js"></script>
 </body>
 </html>
