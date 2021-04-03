@@ -1,0 +1,252 @@
+:root {
+  --background: #FBFBFB;
+  --text-color: #151515;
+  --dark-purple: #361236;
+  --purple: #691169;
+  --light-purple: #A611A6;
+
+  /* 62.5% = 10px */
+  font-size: 62.5%;
+}
+
+*, button  {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: var(--purple);
+  position: relative;
+}
+
+header {
+  position: absolute;
+  top: 1.6rem;
+  left: 1.6rem;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 3.2rem;
+}
+
+button {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: var(--light-purple);
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 0.8rem;
+  transition: 0.2s ease-in-out all;
+  font-family: 'Open Sans';
+  font-size: 1.6rem;
+  font-weight: bold;
+  box-shadow: 0px 6px 8px rgba(166, 17, 166, 0.2);
+}
+
+button:hover {
+  background-color: var(--purple);
+  box-shadow: 0px 8px 8px rgba(166, 17, 166, 0.2);
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+input {
+  margin-bottom: 2rem;
+  background-color: #f8f8f8;
+  border: none;
+  outline: none;
+  border-radius: 0.8rem;
+  font-family: 'Open Sans';
+  font-size: 1.6rem;
+  max-width: 100%;
+  padding: 1.6rem;
+  border: 0.1rem solid #f8f8f8;
+  transition: 0.2s ease-in-out all;
+}
+
+input:focus {
+  border-color: var(--light-purple);
+}
+
+.form-container {
+  width: 40rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0px 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+  border-radius: 1.6rem;
+  padding: 3.2rem;
+}
+
+@media screen and (max-width: 530px){
+  .form-container {
+    width: calc(100vw - 3.2rem);  
+  }
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.form-container h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.form-container p {
+  font-size: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.form-container form button {
+  margin-top: 2.4rem;
+}
+
+/* Página de login e transferência */
+#page-login, #page-transfer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem; 
+}
+
+/* Página de logs */
+#page-logs {
+  padding: 1.6rem; 
+}
+
+#page-logs section {
+  margin-bottom: 5rem; 
+}
+
+#page-logs main {
+  margin-top: 10rem;
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#page-logs h2 {
+  font-size: 4.8rem;
+  margin-bottom: 2.4rem;
+  color: #fff;
+}
+
+#page-logs .grid-cards-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.6rem;
+}
+
+@media screen and (max-width: 768px){
+  #page-logs .grid-cards-container {
+    grid-template-columns: 1fr;    
+  }
+}
+
+#page-logs .grid-cards-container .card {
+  background-color: #fff;
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  min-height: 15rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0px 0.6rem 0.8rem rgba(255, 255, 255, 0.1);
+}
+
+#page-logs .grid-cards-container .card strong {
+  font-size: 1.8rem;
+  color: #3F3F3F;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: 'Poppins';
+}
+
+#page-logs .grid-cards-container .card h3 {
+  font-family: 'Open Sans';
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #000;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px){
+  #page-logs .grid-cards-container .card {
+    min-height: 10rem; 
+  }
+
+  #page-logs .grid-cards-container .card strong {
+    font-size: 1.2rem;    
+  }
+
+  #page-logs .grid-cards-container .card h3 {
+    font-size: 2.2rem;
+    line-height: 3.0rem;    
+  }
+}
+
+#page-logs #section-table h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+  color: #fff;
+}
+
+#section-table table {
+  width: 100%;  
+  max-width: 100%;    
+  border-collapse: collapse;
+  background-color: #fff;
+  -moz-border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+#section-table {
+  overflow-x: auto;
+}
+
+#section-table table th:first-child {
+  border-top-left-radius: 0.98rem;
+}
+
+#section-table table th:last-child {
+  border-top-right-radius: 1rem;
+}
+
+#section-table th {
+  background-color: var(--dark-purple);
+  color: #fff;
+  font-weight: bold;  
+}
+
+#section-table th, #section-table td {
+  text-align: left;
+  font-size: 1.6rem;
+  padding: 1.6rem;
+  min-width: 20rem;
+}
+
+
