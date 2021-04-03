@@ -27,7 +27,6 @@
         <button id="btn-login" type="submit">Entrar</button>
       </form>
     </div>
-    <p class="msg-erro">TESTE ERO</p>
   </main>
   <script src="src/js/main.js"></script>
   <script src="src/js/events.js"></script>
