@@ -270,5 +270,12 @@ input:focus {
   bottom: 2.5rem;
 }
 
+.msg-error{
+  color: red;
+  font-size: 1.1rem;
+  text-align: center;
+  display: none;
+}
+
 
 

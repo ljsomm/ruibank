@@ -24,6 +24,7 @@
 
         <label for="password-input">Senha</label>
         <input id="password-input" name="senha" type="password" placeholder="Digite sua senha">
+        <span id="error-login" class="msg-error">O CPF ou a senha estão inválidos</span>
         <button id="btn-login" type="submit">Entrar</button>
       </form>
     </div>
