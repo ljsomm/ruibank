@@ -33,11 +33,15 @@ function transferencia(){
             processData: false,
             contentType: false
         }).done(res => {
-            alert(res)
             let r = $.parseJSON(res)
-            if(r[0]){
-                window.location = "logs.php"
+            if(r.result){
+                document.getElementById("transfer-container").style = "flex-direction: row;align-items:center;justify-content: center"
+                document.getElementById("transfer-container").innerHTML = "<img class='icon-result' src='src/assets/icon/check.svg'><div class='msg-result'>"+r.msg+"</div>"
             }
+            else{
+                
+            }
+            
         })
         return false
 }

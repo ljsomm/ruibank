@@ -19,5 +19,6 @@ $(document).ready(()=>{
     $("#transferencia").submit(()=>{
         transferencia()
     })
+    
 })
 

@@ -64,11 +64,11 @@ class Transfer{
         $q->bindValue(":d", $this->destino->retornaId());
         $q->bindValue(":v", $this->valor);
         if($q->execute() && $this->origem->decSaldo($this->valor) && $this->destino->incSaldo($this->valor)){
-            return array(true, "Transferencia efetuada com sucesso");
+            return array("result"=>true, "msg"=>"Transferencia efetuada com sucesso");
         }
         else{
-            if($q->errorInfo()[1]){
-                return array(false, "Usuario nao existe existe");
+            if($q->errorInfo()[1] == 1452){
+                return array("result"=>false, "msg"=>"Usuario nao existe existe");
             }
         }
     }

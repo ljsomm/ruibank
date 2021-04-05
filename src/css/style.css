@@ -277,5 +277,16 @@ input:focus {
   display: none;
 }
 
+.icon-result{
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+}
+
+.msg-result{
+  font-size: 1.5rem;
+  display: inline;
+}
+
 
 

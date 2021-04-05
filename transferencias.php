@@ -13,7 +13,7 @@
   <?php require "./components/header.php" ?>
   <div id='logout'>Sair</div>
   <main>
-    <div class="form-container">
+    <div id="transfer-container" class="form-container">
       <h2>Transferência</h2>
       <p>Seu saldo atual: R$ 1.500,00</p>
 
