@@ -37,11 +37,23 @@ function transferencia(){
             if(r.result){
                 document.getElementById("transfer-container").style = "flex-direction: row;align-items:center;justify-content: center"
                 document.getElementById("transfer-container").innerHTML = "<img class='icon-result' src='src/assets/icon/check.svg'><div class='msg-result'>"+r.msg+"</div>"
+                setTimeout(()=>{window.location = "logs.php"}, 3000)
             }
             else{
-                
+
             }
             
         })
         return false
+}
+
+function getAllData(){
+    $.post({
+        url: "api/restLog.php"
+    }).done(res => {
+        let r = $.parseJSON(res)
+        for(let rsp of r){
+            $("#logs").append("<tr><td>"+ rsp.hash +"</td><td>"+ rsp.origem +"</td><td>"+ rsp.destino +"</td><td>R$ "+ rsp.valor+"</td><td>"+ rsp.data +"</td></tr>")
+        }
+    })
 }

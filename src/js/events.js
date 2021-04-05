@@ -22,3 +22,7 @@ $(document).ready(()=>{
     
 })
 
+$("#page-transfer").ready(()=>{
+    getAllData()
+})
+

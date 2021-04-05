@@ -13,13 +13,14 @@
 <body id="page-logs">
   <?php require "./components/header.php" ?>
   <div id='logout'>Sair</div>
+
+  <main>
   <div class="fixed-button">
     <button id="btn-transferencia">+</button>
   </div>
-  <main>
     <section>
       <h2>Dashboard</h2>
-      <div class="grid-cards-container">
+      <div id="info" class="grid-cards-container">
         <div class="card">
           <strong>Total movimentado</strong>
           <h3>R$ 563.456,12</h3>
@@ -40,7 +41,7 @@
     <section id="section-table">
       <h3>Logs</h3>
 
-      <table class="logs">
+      <table id="logs" class="logs">
         <tr>
           <th>Hash</th>
           <th>Origem</th>
@@ -49,55 +50,7 @@
           <th>Data e hora</th>
         </tr>
 
-        <tr>
-          <td>45446f5g4s56a4g5sa</td>
-          <td>494925632410</td>
-          <td>494925636523</td>
-          <td>R$ 150.000,00</td>
-          <td>10/10/2021 15:32:00</td>
-        </tr>
-        <tr>
-          <td>45446f5g4s56a4g5sa</td>
-          <td>494925632410</td>
-          <td>494925636523</td>
-          <td>R$ 150.000,00</td>
-          <td>10/10/2021 15:32:00</td>
-        </tr>
-        <tr>
-          <td>45446f5g4s56a4g5sa</td>
-          <td>494925632410</td>
-          <td>494925636523</td>
-          <td>R$ 150.000,00</td>
-          <td>10/10/2021 15:32:00</td>
-        </tr>
-        <tr>
-          <td>45446f5g4s56a4g5sa</td>
-          <td>494925632410</td>
-          <td>494925636523</td>
-          <td>R$ 150.000,00</td>
-          <td>10/10/2021 15:32:00</td>
-        </tr>
-        <tr>
-          <td>45446f5g4s56a4g5sa</td>
-          <td>494925632410</td>
-          <td>494925636523</td>
-          <td>R$ 150.000,00</td>
-          <td>10/10/2021 15:32:00</td>
-        </tr>
-        <tr>
-          <td>45446f5g4s56a4g5sa</td>
-          <td>494925632410</td>
-          <td>494925636523</td>
-          <td>R$ 150.000,00</td>
-          <td>10/10/2021 15:32:00</td>
-        </tr>
-        <tr>
-          <td>45446f5g4s56a4g5sa</td>
-          <td>494925632410</td>
-          <td>494925636523</td>
-          <td>R$ 150.000,00</td>
-          <td>10/10/2021 15:32:00</td>
-        </tr>
+        
       </table>
     </section>
   </main>

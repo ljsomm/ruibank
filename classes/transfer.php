@@ -94,4 +94,25 @@ class Transfer{
         $sel->execute();
         return $sel->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function quantidade(){
+        require "../database/connection/conn.php";
+        $qr = $conn->prepare("SELECT COUNT(*) FROM tb_transacao");
+        $qr->execute();
+        return $qr->fetchColumn();
+    }
+
+    public function total(){
+        require "../database/connection/conn.php";
+        $qr = $conn->prepare("SELECT SUM(vl_transferencia) FROM tb_transacao");
+        $qr->execute();
+        return $qr->fetchColumn();
+    }
+
+    public function recente(){
+        require "../database/connection/conn.php";
+        $qr = $conn->prepare("SELECT MAX(dt_transferencia) FROM tb_transacao");
+        $qr->execute();
+        return $qr->fetchColumn();
+    }
 }
