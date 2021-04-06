@@ -92,7 +92,12 @@ class Transfer{
         require "../database/connection/conn.php";
         $sel = $conn->prepare("SELECT cd_hash as 'hash', cd_conta_origem as origem, cd_conta_destino as destino, vl_transferencia as valor, dt_transferencia as 'data' FROM tb_transacao");
         $sel->execute();
-        return $sel->fetchAll(PDO::FETCH_ASSOC);
+        $all = $sel->fetchAll(PDO::FETCH_ASSOC);
+        $q = $this->quantidade();
+        for($i = 0; $i < $q; $i++){
+            $all[$i]["data"] = $this->trataData($all[$i]["data"]);
+        }
+        return $all;
     }
 
     public function quantidade(){
@@ -114,5 +119,15 @@ class Transfer{
         $qr = $conn->prepare("SELECT MAX(dt_transferencia) FROM tb_transacao");
         $qr->execute();
         return $qr->fetchColumn();
+    }
+
+    public function trataData($val){
+        $datahora = explode(" ", $val);
+        $data = $datahora[0];
+        $data = explode("-", $data);
+        $d = $data[2];
+        $m = $data[1];
+        $a = $data[0];
+        return $d . "/" . $m . "/" . $a . " " . $datahora[1];
     }
 }
