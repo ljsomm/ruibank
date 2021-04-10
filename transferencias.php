@@ -21,8 +21,8 @@
         <label for="value-input">Quanto você quer transferir?</label>
         <input id="value-input" name="valor" type="text" placeholder="Digite um valor">
 
-        <label for="cpf-input">Para quem? (Insira o CPF do favorecido)</label>
-        <input id="cpf-input" name="destino" type="text" placeholder="Digite o CPF" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="11">
+        <label for="cpf-transfer-input">Para quem? (Insira o CPF do favorecido)</label>
+        <input id="cpf-transfer-input" name="destino" type="text" placeholder="Digite o CPF" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="11">
 
         <button id="btn-transferir" type="submit">Transferir</button>
       </form>

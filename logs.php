@@ -23,17 +23,17 @@
       <div id="info" class="grid-cards-container">
         <div class="card">
           <strong>Total movimentado</strong>
-          <h3>R$ 563.456,12</h3>
+          <h3 id="total"></h3>
         </div>
 
         <div class="card">
           <strong>Quantidade de transações</strong>
-          <h3>+4568</h3>
+          <h3 id="quantidade">+4568</h3>
         </div>
 
         <div class="card">
           <strong>Última atualização</strong>
-          <h3><?= date("d/m/Y H:i:s"); ?></h3>
+          <h3 id="recente"></h3>
         </div>
       </div>
     </section>

@@ -25,7 +25,7 @@ function login(){
 }
 
 function transferencia(){
-    event.preventDefault()
+    
     let val = new FormData(document.getElementById("transferencia"))
         $.post({
             url: "api/restTransfer.php",
@@ -47,13 +47,24 @@ function transferencia(){
         return false
 }
 
-function getAllData(){
+function getLog(){
     $.post({
         url: "api/restLog.php"
     }).done(res => {
         let r = $.parseJSON(res)
         for(let rsp of r){
-            $("#logs").append("<tr><td>"+ rsp.hash +"</td><td>"+ rsp.origem +"</td><td>"+ rsp.destino +"</td><td>R$ "+ rsp.valor+"</td><td>"+ rsp.data +"</td></tr>")
+            $("#logs").append("<tr><td>"+ rsp.hash +"</td><td>"+ rsp.origem +"</td><td>"+ rsp.destino +"</td><td>R$ "+ rsp.valor.replace(".", ",")+"</td><td>"+ rsp.data +"</td></tr>")
         }
+    })
+}
+
+function getDashData(){
+    $.post({
+        url: "api/restDashboard.php"
+    }).done(res => {
+        let r = $.parseJSON(res)
+        $("#total").html("R$ "+r.total.replace(".", ","))
+        $("#quantidade").html(r.quantidade)
+        $("#recente").html(r.recente)
     })
 }

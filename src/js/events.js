@@ -17,12 +17,19 @@ $(document).ready(()=>{
         window.location = "./transferencias.php"
     })
     $("#transferencia").submit(()=>{
-        transferencia()
+        event.preventDefault()
+        if($("#value-input").val() == "" || $("#cpf-input").val() == ""){
+            alert()
+        }
+        else{
+            transferencia()
+        }
     })
     
 })
 
 $("#page-transfer").ready(()=>{
-    getAllData()
+    getDashData()
+    getLog()
 })
 

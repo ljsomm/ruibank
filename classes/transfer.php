@@ -20,7 +20,7 @@ class Transfer{
         $this->origem = $args[0];
         $this->destino = $args[1];
         $this->hash = md5($args[2] . $this->lastHash());
-        $this->valor = $args[3];
+        $this->valor = str_replace(",", ".", $args[3]);
     }
 
     public function getHash(){
@@ -118,7 +118,7 @@ class Transfer{
         require "../database/connection/conn.php";
         $qr = $conn->prepare("SELECT MAX(dt_transferencia) FROM tb_transacao");
         $qr->execute();
-        return $qr->fetchColumn();
+        return $this->trataData($qr->fetchColumn());
     }
 
     public function trataData($val){
@@ -130,4 +130,5 @@ class Transfer{
         $a = $data[0];
         return $d . "/" . $m . "/" . $a . " " . $datahora[1];
     }
+
 }
