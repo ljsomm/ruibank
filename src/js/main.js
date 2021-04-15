@@ -52,6 +52,7 @@ function getLog(){
         url: "api/restLog.php"
     }).done(res => {
         let r = $.parseJSON(res)
+        $("#logs").html("<tr><th>Hash</th><th>Origem</th><th>Destino</th><th>Quantia</th><th>Data e hora</th></tr>")
         for(let rsp of r){
             $("#logs").append("<tr><td>"+ rsp.hash +"</td><td>"+ rsp.origem +"</td><td>"+ rsp.destino +"</td><td>R$ "+ rsp.valor.replace(".", ",")+"</td><td>"+ rsp.data +"</td></tr>")
         }

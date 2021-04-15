@@ -1,4 +1,5 @@
 $(document).ready(()=>{
+
     $("#login").submit(()=>{
         login()
     })
@@ -25,11 +26,14 @@ $(document).ready(()=>{
             transferencia()
         }
     })
-    
 })
 
 $("#page-transfer").ready(()=>{
-    getDashData()
-    getLog()
+    setInterval(()=>{    
+        getDashData()
+        getLog()
+        $(".loader").hide()
+    }, 1500)
+    
 })
 

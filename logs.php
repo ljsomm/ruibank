@@ -11,13 +11,20 @@
 <?php require "./components/head.php" ?>
 
 <body id="page-logs">
-  <?php require "./components/header.php" ?>
-  <div id='logout'>Sair</div>
 
-  <main>
   <div class="fixed-button">
     <button id="btn-transferencia">+</button>
   </div>
+  <?php require "./components/header.php" ?>
+  <div id='logout'>Sair</div>
+  <div class="loader">
+          <div class="box-load">
+            <div class="load"></div>
+            <p>Carregando</p>
+          </div>      
+  </div>
+  <main>
+
     <section>
       <h2>Dashboard</h2>
       <div id="info" class="grid-cards-container">
@@ -28,7 +35,7 @@
 
         <div class="card">
           <strong>Quantidade de transações</strong>
-          <h3 id="quantidade">+4568</h3>
+          <h3 id="quantidade"></h3>
         </div>
 
         <div class="card">
@@ -42,15 +49,7 @@
       <h3>Logs</h3>
 
       <table id="logs" class="logs">
-        <tr>
-          <th>Hash</th>
-          <th>Origem</th>
-          <th>Destino</th>
-          <th>Quantia</th>
-          <th>Data e hora</th>
-        </tr>
-
-        
+      
       </table>
     </section>
   </main>
