@@ -35,9 +35,12 @@ function transferencia(){
         }).done(res => {
             let r = $.parseJSON(res)
             if(r.result){
-                document.getElementById("transfer-container").style = "flex-direction: row;align-items:center;justify-content: center"
-                document.getElementById("transfer-container").innerHTML = "<img class='icon-result' src='src/assets/icon/check.svg'><div class='msg-result'>"+r.msg+"</div>"
-                setTimeout(()=>{window.location = "logs.php"}, 3000)
+                
+                document.getElementById("transfer-container").innerHTML = "<div id='final'><img class='icon-result' src='src/assets/icon/check.svg'><div class='msg-result'>"+r.msg+"</div></div><br><div id='return'><button id='btn-transferencias-again' class='btn-return'>Realizar outra transação</button><button id='btn-logs' class='btn-return'>Voltar para os Logs</button></div>"
+                document.getElementById("final").style = "flex-direction: row;align-items:center;justify-content: center"
+                document.getElementById("btn-logs").addEventListener("click",()=>{window.location = "./logs.php"})
+                document.getElementById("btn-transferencias-again").addEventListener("click",()=>{window.location = "./transferencias.php"})
+                //window.location = "logs.php"}, 3000)
             }
             else{
 

@@ -309,8 +309,6 @@ input:focus {
   padding: 5px;
 }
 
-
-
 .load{
   border: 7.5px solid rgb(187, 187, 187);
   border-top: 7.5px solid white;
@@ -324,5 +322,14 @@ input:focus {
   from{
       transform: rotate(-360deg);
   }
+}
+
+#final{
+  display: flex;
+}
+
+.btn-return{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
