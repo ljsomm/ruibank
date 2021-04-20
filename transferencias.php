@@ -13,8 +13,9 @@
   <?php require "./components/header.php" ?>
   <div id='logout'>Sair</div>
   <main>
+    
     <div id="transfer-container" class="form-container">
-      <h2>Transferência</h2>
+    <div class="header-block"><h2>Transferência</h2><a href="./logs.php">Voltar</a></div>
       <p>Seu saldo atual: R$ 1.500,00</p>
 
       <form id="transferencia">
