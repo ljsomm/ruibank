@@ -1,5 +1,4 @@
 $(document).ready(()=>{
-
     $("#login").submit(()=>{
         login()
     })
@@ -28,12 +27,17 @@ $(document).ready(()=>{
     })
 })
 
-$("#page-transfer").ready(()=>{
+$("#page-logs").ready(()=>{
     setInterval(()=>{    
         getDashData()
         getLog()
+        getSaldo()
         $(".loader").hide()
     }, 1500)
     
+})
+
+$("#page-transfer").ready(()=>{
+    getSaldo()
 })
 

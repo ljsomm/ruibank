@@ -92,7 +92,7 @@ class Account{
         $saldo = $conn->prepare("SELECT vl_saldo FROM tb_conta WHERE cd_cpf = :cpf");
         $saldo->bindValue(":cpf", $this->cpf);
         $saldo->execute();
-        return $saldo->fetchColumn();
+        return  $saldo->fetchColumn();
     }
 
     public function incSaldo($acr){

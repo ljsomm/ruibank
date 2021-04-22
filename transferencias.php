@@ -16,7 +16,7 @@
     
     <div id="transfer-container" class="form-container">
     <div class="header-block"><h2>Transferência</h2><a href="./logs.php">Voltar</a></div>
-      <p>Seu saldo atual: R$ 1.500,00</p>
+      <p>Seu saldo atual: <b class="saldo"></b></p>
 
       <form id="transferencia">
         <label for="value-input">Quanto você quer transferir?</label>

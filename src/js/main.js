@@ -72,3 +72,12 @@ function getDashData(){
         $("#recente").html(r.recente)
     })
 }
+
+function getSaldo(){
+    $.post({
+        url: "api/restAccount.php"
+    }).done(res=>{
+        let r = $.parseJSON(res)
+        $(".saldo").html("R$ " + r.saldo.replace(".", ","))
+    })
+}
