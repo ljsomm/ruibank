@@ -31,6 +31,7 @@
   </main>
   <script src="src/js/main.js"></script>
   <script src="src/js/events.js"></script>
+  <script src="src/js/events-transfer.js"></script>
 </body>
 
 </html>

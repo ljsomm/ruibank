@@ -56,5 +56,6 @@
 
   <script src="src/js/main.js"></script>
   <script src="src/js/events.js"></script>
+  <script src="src/js/events-logs.js"></script>
 </body>
 </html>
