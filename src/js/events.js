@@ -18,8 +18,15 @@ $(document).ready(()=>{
     })
     $("#transferencia").submit(()=>{
         event.preventDefault()
+        
+        document.getElementById("cpf-transfer-input").style.border = "none"
+        document.getElementById("value-input").style.border = "none"
+        document.getElementById("error-transfer").style.display = "none"
         if($("#value-input").val() == "" || $("#cpf-input").val() == ""){
-            alert()
+            document.getElementById("cpf-transfer-input").style.border = "1px solid red"
+            document.getElementById("value-input").style.border = "1px solid red"
+            document.getElementById("error-transfer").style.display = "block"
+            document.getElementById("error-transfer").innerHTML = "Preencha todos os campos"
         }
         else{
             transferencia()

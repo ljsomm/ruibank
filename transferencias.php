@@ -24,7 +24,7 @@
 
         <label for="cpf-transfer-input">Para quem? (Insira o CPF do favorecido)</label>
         <input id="cpf-transfer-input" name="destino" type="text" placeholder="Digite o CPF" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="11">
-
+        <span id="error-transfer" class="msg-error"></span>
         <button id="btn-transferir" type="submit">Transferir</button>
       </form>
     </div>

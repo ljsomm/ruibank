@@ -63,13 +63,18 @@ class Transfer{
         $q->bindValue(":o", $this->origem->retornaId());
         $q->bindValue(":d", $this->destino->retornaId());
         $q->bindValue(":v", $this->valor);
-        if($q->execute() && $this->origem->decSaldo($this->valor) && $this->destino->incSaldo($this->valor)){
-            return array("result"=>true, "msg"=>"Transferencia efetuada com sucesso");
+        if($this->origem != $this->destino){
+            if($q->execute() && $this->origem->decSaldo($this->valor) && $this->destino->incSaldo($this->valor)){
+                return array("result"=>true, "msg"=>"Transferência efetuada com sucesso");
+            }
+            else{
+                if($q->errorInfo()[1] == 1452){
+                    return array("result"=>2, "msg"=>"Usuário não existe");
+                }
+            }
         }
         else{
-            if($q->errorInfo()[1] == 1452){
-                return array("result"=>false, "msg"=>"Usuario nao existe existe");
-            }
+            return array("result"=>3, "msg"=>"Não é permitido fazer transferencias para si");
         }
     }
 
