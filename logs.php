@@ -42,6 +42,7 @@
           <strong>Última atualização</strong>
           <h3 id="recente"></h3>
         </div>
+        
       </div>
     </section>
 
